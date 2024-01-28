@@ -18,10 +18,10 @@ const News = (props) => {
     const updateNews = async () => {
         let url;
         if (props.category === "null") {
-            url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=8b79081d087246ada0bc156e6a6690c5&page=${page}&pagesize=${props.pageSize}`;
+            url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${PRIVATE_KEY}&page=${page}&pagesize=${props.pageSize}`;
         }
         else {
-            url = `https://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=8b79081d087246ada0bc156e6a6690c5&page=${page}&pagesize=${props.pageSize}`;
+            url = `https://newsapi.org/v2/top-headlines?country=in&category=${props.category}&apiKey=${PRIVATE_KEY}&page=${page}&pagesize=${props.pageSize}`;
         }
         console.log("else api is called");
         setloading(true)
